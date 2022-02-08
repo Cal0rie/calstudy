@@ -1,0 +1,12 @@
+
+#all.data-v-fc4c10f0 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight:bold;
+}
+button.data-v-fc4c10f0{
+    align-self: end;
+}
+

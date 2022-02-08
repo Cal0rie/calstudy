@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Content/Content",
+    "pages/Edit/Edit",
+    "pages/New/New"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/部门首页.png",
+        "selectedIconPath": "static/部门首页.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/New/New",
+        "iconPath": "static/问题反馈.png",
+        "selectedIconPath": "static/问题反馈.png",
+        "text": "新博客"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

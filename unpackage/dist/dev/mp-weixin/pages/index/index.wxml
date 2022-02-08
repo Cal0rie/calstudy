@@ -1,0 +1,1 @@
+<view><block wx:for="{{list}}" wx:for-item="item" wx:for-index="index"><view data-event-opts="{{[['tap',[['xq',[index]]]]]}}" bindtap="__e"><view class="tit">{{index+1+"  "+blog.blogs[index].title}}</view><view class="con">{{blog.blogs[index].content}}</view></view></block><view class="_hr"></view></view>
