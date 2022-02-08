@@ -17,7 +17,7 @@
 </script>
 
 <style>
-	/*每个页面公共css */
+	/* 公共css */
 	.con{
 		font-weight:bold;
 		color: #8f8f94;
