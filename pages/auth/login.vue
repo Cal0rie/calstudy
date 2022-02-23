@@ -2,13 +2,13 @@
 	<view class="wrap">
 		<view class="top"></view>
 		<view class="content">
-			<view class="title">欢迎登录教考管理系统</view>
+			<view class="title">欢迎登录教考系统</view>
 			<input class="u-border-bottom" type="number" v-model="tel" placeholder="请输入手机号" />
-			<view class="tips">未注册的手机号验证后自动创建账号</view>
-			<button @tap="submit" :style="[inputStyle]" class="getCaptcha">获取短信验证码</button>
+			<input class="u-border-bottom" type="password" v-model="pas" placeholder="请输入密码" />
+			<button @tap="submit" :style="[inputStyle]" class="getCaptcha">登录</button>
 			<view class="alternative">
-				<view class="password">密码登录</view>
-				<view class="issue">遇到问题</view>
+				<view class="password">找回密码</view>
+				<view class="issue">注册</view>
 			</view>
 		</view>
 		<view class="buttom">
@@ -20,13 +20,14 @@
 export default {
 	data() {
 		return {
-			tel: ''
+			tel: '',
+			pas: '',
 		}
 	},
 	computed: {
 		inputStyle() {
 			let style = {};
-			if(this.tel) {
+			if(this.tel&&this.pas) {
 				style.color = "#fff";
 				style.backgroundColor = this.$u.color['warning'];
 			}
@@ -46,6 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.u-border-bottom{
+	margin-bottom: 40rpx !important;
+}
 .wrap {
 	font-size: 28rpx;
 	.content {
@@ -64,7 +68,7 @@ export default {
 			padding-bottom: 6rpx;
 		}
 		.tips {
-			color: $u-type-info;
+			//color: $u-type-info;
 			margin-bottom: 60rpx;
 			margin-top: 8rpx;
 		}
@@ -107,7 +111,7 @@ export default {
 			color: $u-tips-color;
 			
 			.link {
-				color: $u-type-warning;
+				//color: $u-type-warning;
 			}
 		}
 	}
