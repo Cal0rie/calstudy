@@ -2,17 +2,26 @@
 	<view class="wrap">
 		<view class="top"></view>
 		<view class="content">
-			<view class="title">欢迎登录教考系统</view>
+			<view class="title">新用户注册</view>
 			<input class="u-border-bottom" type="number" v-model="tel" placeholder="请输入手机号" />
-			<input class="u-border-bottom" type="password" v-model="pas" placeholder="请输入密码" />
-			<button @tap="submit" :style="[inputStyle]" class="getCaptcha">登录</button>
+			<view class='yzm'>
+			<input id='reg' class="u-border-bottom" type="password" v-model="pas" placeholder="请输入验证码" />
+			<button class='get' @tap="sendCode" :disabled="disabled">{{send}}</button>
+			</view>
+			<button @tap="submit" :style="[inputStyle]" class="getCaptcha">提交</button>
 			<view class="alternative">
-				<view class="password">找回密码</view>
-				<view class="issue">注册</view>
 			</view>
 		</view>
 		<view class="buttom">
 		</view>
+		
+<!-- <view class="wrap">
+		<u-toast ref="uToast"></u-toast>
+		<u-code :seconds="seconds" @end="end" @start="start" ref="uCode" 
+		@change="codeChange"></u-code>
+		<u-button @tap="getCode">{{tips}}</u-button>
+	</view> -->
+	
 	</view>
 </template>
 
@@ -22,6 +31,12 @@ export default {
 		return {
 			tel: '',
 			pas: '',
+			
+			send: '获取验证码',
+			disabled:false,
+			tips: '',
+			// refCode: null,
+			seconds: 10,
 		}
 	},
 	computed: {
@@ -37,18 +52,46 @@ export default {
 		}
 	},
 	methods: {
-		submit() {
-			if(this.$u.test.mobile(this.tel)) {
-				this.$u.route({
-					url: 'pages/index/index'
-				})
-			}
-		}
+	submit() {
+			
+		},
+	sendCode() {
+	    let self = this
+	                //验证码
+	    self.disabled = true;
+	    var time = 30;                //时间为10s，可以按情况更改 
+	    var timer = setInterval(fun, 1000);  //设置定时器 
+	    function fun() {
+	        time--;
+	        if(time>=0) {
+	            self.send = time + "s后重新发送"; 
+	        }else if(time<0){ 
+	            self.send = "重新发送验证码"; 
+	            self.disabled = false;  //倒计时结束能够重新点击发送的按钮 
+	            clearInterval(timer);  //清除定时器 
+	            time = 10;  //设置循环重新开始条件 
+	        } 
+	    }
 	}
-};
+}
+}
 </script>
 
 <style lang="scss" scoped>
+.yzm{
+	display: flex;
+}
+.get{
+	background-color: $u-primary;
+	font-size: 30rpx;
+	width: 50%;
+	height: 70rpx;
+	line-height: 70rpx;
+	bottom: 10rpx;
+}
+#reg{
+	
+}
 .u-border-bottom{
 	margin-bottom: 40rpx !important;
 }
@@ -66,7 +109,7 @@ export default {
 		}
 		input {
 			text-align: left;
-			margin-bottom: 10rpx;
+			margin-bottom: 0rpx;
 			padding-bottom: 6rpx;
 		}
 		.getCaptcha {
@@ -75,6 +118,8 @@ export default {
 			border: none;
 			font-size: 30rpx;
 			padding: 12rpx 0;
+			width: 70%;
+			top: 50rpx;
 			
 			&::after {
 				border: none;
