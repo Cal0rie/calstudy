@@ -1,9 +1,9 @@
 <template>
 	<view>
 		<view class='cont'>
-		<view class='content'><view>★</view><view>我的考试</view><view>></view></view>
-		<view class='content'><view>★</view><view>日程管理</view><view>></view></view>
-		<view class='content'><view>★</view><view>个人成绩</view><view>></view></view>
+		<view class='content'><view>★</view><view class='text'>我的考试</view><view>></view></view>
+		<view class='content'><view>★</view><view class='text'>日程管理</view><view>></view></view>
+		<view class='content'><view>★</view><view class='text'>个人成绩</view><view>></view></view>
 		</view>
 			<tab></tab>
 	    </view>
@@ -37,9 +37,12 @@ export default{
 </script>
 
 <style>
+	.text{
+		width: 60%;
+	}
 	.content{
 		font-size: 50rpx;
-		height: 100rpx;
+		height: 200rpx;
 		color :#000000;
 		line-height: 100rpx;
 		display: flex;
@@ -47,6 +50,7 @@ export default{
 		width: 100%;
 	}
 	.cont{
+		margin-top: 100rpx;
 		/* display: flex;
 		flex-direction: column; */
 	}
