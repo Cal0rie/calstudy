@@ -149,18 +149,15 @@
 	// 	]
 	// },
     "tabBar" : {
-<<<<<<< HEAD
         "color" : "black",
         "selectedColor" : "#f9ae3d",
         "borderStyle" : "black",
         "backgroundColor" : "#ffffff",
 		"fontSize":"30rpx",
-=======
         "color" : "#7A7E83",
         "selectedColor" : "#3cc51f",
         "borderStyle" : "black",
         "backgroundColor" : "#ffffff",
->>>>>>> 42fd89a22a8a920431a7b735f21d4a3f97c661ad
         "list" : [
             {
                 "pagePath" : "pages/student/index",
