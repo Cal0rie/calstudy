@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
 	<view id="all">
 		<view class="title">设置</view>
 		<u-collapse :value="['2']">
@@ -10,12 +11,24 @@
 		</u-collapse>
 	</view>
 	
+=======
+	<view>
+		
+	</view>
+>>>>>>> 42fd89a22a8a920431a7b735f21d4a3f97c661ad
 </template>
 
 <script>
 	export default {
+<<<<<<< HEAD
 		components:{
 			
+=======
+		data() {
+			return {
+				
+			}
+>>>>>>> 42fd89a22a8a920431a7b735f21d4a3f97c661ad
 		},
 		methods: {
 			
@@ -23,6 +36,7 @@
 	}
 </script>
 
+<<<<<<< HEAD
 <style scoped>
 	#all{
 		margin-top:40rpx;
@@ -42,4 +56,8 @@
 			font-weight: 500;
 			margin-bottom: 60rpx;
 		}
+=======
+<style>
+
+>>>>>>> 42fd89a22a8a920431a7b735f21d4a3f97c661ad
 </style>
