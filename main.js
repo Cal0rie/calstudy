@@ -24,3 +24,6 @@ export function createApp() {
 // #endif
 import uView from 'uview-ui';
 Vue.use(uView)
+
+import tabBar from 'components/tab.vue'
+Vue.component('tab-bar',tabBar) //挂载

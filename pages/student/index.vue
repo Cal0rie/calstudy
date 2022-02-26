@@ -5,7 +5,7 @@
 		<view class='content'><view>★</view><view class='text'>日程管理</view><view>></view></view>
 		<view class='content'><view>★</view><view class='text'>个人成绩</view><view>></view></view>
 		</view>
-			<tab></tab>
+			<!-- <tab></tab> -->
 	    </view>
 </template>
 

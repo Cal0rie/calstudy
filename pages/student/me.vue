@@ -1,6 +1,7 @@
 <template>
+	<view>
 	<view id='all'>
-		<view class='content'>
+		<view @tap='edit' class='content'>
 			<u-avatar
 						size="65"
 			            text="张"
@@ -11,7 +12,7 @@
 			<view class='to'>></view>
 			</view>
 			
-			<u-line id='line'></u-line>
+			<!-- <u-line id='line'></u-line> -->
 			<u-cell-group id='set'>
 				<u-cell size ="large" :isLink="true" icon="setting-fill" title="设置"></u-cell>
 			</u-cell-group>
@@ -19,46 +20,54 @@
 			
 			
 	</view>
+	<!-- <tab></tab> -->
+	</view>
 </template>
 
 <script>
+import tab from '../../components/tab.vue'
 	export default {
+		components:{
+			tab
+		},
 		data() {
 			return {
 				text: '无头像',
 			}
 		},
 		methods: {
-			
+			edit(){
+				uni.navigateTo({
+					url:'mes/edit'
+				})
+			}
 		}
 	}
 </script>
 
 <style scoped>
 	#all{
+		margin-top:40rpx;
+		margin-left:30rpx;
+		margin-right:30rpx;
+		display:flex;
+		flex-direction: column;
 	}
 	#set{
-		position: fixed;
-		top: 280rpx;
-	}
-	#line{
-		position: fixed;
-		top: 280rpx;
+		
 	}
 .text{
 	position: relative;
 	top:10rpx;
 		width: 60%;
+		margin-top: 5rpx;
 		
 	}
 	.content{
-		position: fixed;
-		top: 120rpx;
 		left: 25rpx;
 		font-size: 70rpx;
-		height: 200rpx;
+		margin-bottom: 40rpx;
 		color :#000000;
-		line-height: 100rpx;
 		display: flex;
 		justify-content: space-around;
 		width: 100%;
@@ -66,10 +75,7 @@
 	}
 	.to{
 		position: relative;
-		top:10rpx;
-		right:40rpx;
-	}
-	.cont{
-		margin-top: 100rpx;
+		top:15rpx;
+		right:10rpx;
 	}
 </style>
