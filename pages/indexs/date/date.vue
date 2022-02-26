@@ -1,29 +1,21 @@
 <template>
 	<view id="all">
-		<view class="title">消息</view>
+		<view class="title">日程管理</view>
 		<u-collapse :value="['2']">
 		<u-collapse-item class='wd' 
-		title='未读'
+		title='软件版本'
 		 >
-		 <text>成绩通知：</text>
-		 <text>考试通知：</text>
+		 <text>beta1.0.0</text>
 		 </u-collapse-item>
-		 <u-collapse-item
-		 title='已读'
-		  >
-		  <text>成绩通知：</text>
-		  <text>考试通知：</text>
-		  </u-collapse-item>
 		</u-collapse>
 	</view>
 	
 </template>
 
 <script>
-import tab from '../../components/tab.vue'
 	export default {
 		components:{
-			tab
+			
 		},
 		methods: {
 			

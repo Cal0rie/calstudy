@@ -1,11 +1,11 @@
 <template>
 	<view>
 		<view class='cont'>
-		<view class='content'><view>★</view><view class='text'>我的考试</view><view>></view></view>
-		<view class='content'><view>★</view><view class='text'>日程管理</view><view>></view></view>
-		<view class='content'><view>★</view><view class='text'>个人成绩</view><view>></view></view>
+		<view @tap='myexam' class='content'><view>★</view><view class='text'>我的考试</view><view>></view></view>
+		<view @tap='date' class='content'><view>★</view><view class='text'>日程管理</view><view>></view></view>
+		<view @tap='score' class='content'><view>★</view><view class='text'>个人成绩</view><view>></view></view>
 		</view>
-			<tab></tab>
+			<!-- <tab></tab> -->
 	    </view>
 </template>
 
@@ -27,6 +27,21 @@ export default{
     mounted(){
 	},
     methods:{
+		myexam(){
+			uni.navigateTo({
+				url:'../indexs/myexams/myexams'
+			})
+		},
+		date(){
+			uni.navigateTo({
+				url:'../indexs/date/date'
+			})
+		},
+		score(){
+			uni.navigateTo({
+				url:'../indexs/score/score'
+			})
+		}
 		// xq(index){
 		// 	uni.navigateTo({
 		// 		url:"/pages/Content",

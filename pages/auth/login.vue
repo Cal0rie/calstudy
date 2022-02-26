@@ -8,7 +8,7 @@
 			<button @tap="submit" :style="[inputStyle]" class="getCaptcha">登录</button>
 			<view class="alternative">
 				<view class="password">找回密码</view>
-				<view class="issue">注册</view>
+				<view @tap='reg' class="issue">注册</view>
 			</view>
 		</view>
 		<view class="buttom">
@@ -37,11 +37,17 @@ export default {
 		}
 	},
 	methods: {
+		reg(){
+			uni.navigateTo({
+				url:'./register'
+			})
+		},
 		submit() {
 			if(this.$u.test.mobile(this.tel)) {
-				this.$u.route({
-					url: 'pages/index/index'
+				uni.navigateTo({
+					url:'../identity/identity'
 				})
+				
 			}
 		}
 	}

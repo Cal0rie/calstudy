@@ -4,7 +4,8 @@
 		<view @tap='index' class='tabbar'>首页</view>
 		<view @tap='message' class='tabbar'>消息</view>
 		<view @tap='me' class='tabbar'>我</view>
-	</view>
+		  
+	</view> 
 </template>
 
 <script>
@@ -12,18 +13,40 @@
 		name:"tab",
 		data() {
 			return {
-				
+				selectedIndex: 0, // 标记
+				//showselected: false, // 是否在页面使用tarBar
+				tabBar: {
+									list: [{
+											"pagePath": "pages/index/index",
+											"text": "首页"
+										}, {
+											"pagePath": "pages/team/team",
+											"text": "消息"
+										}, {
+											"pagePath": "pages/promotion/promotion",
+											"text": "我"
+										}
+									]
+								},
 			};
 		},
 		methods:{
 			index(){
-				
+				console.log(1);
+				uni.navigateTo({
+					url:'@/pages/student/index'
+				})
 			},
 			message(){
-				
+				uni.navigateTo({
+					
+					url:'@/pages/student/message'
+				})
 			},
 			me(){
-				
+				uni.navigateTo({
+					url:'../pages/student/me'
+				})
 			},
 		}
 	}

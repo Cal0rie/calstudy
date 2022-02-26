@@ -45,7 +45,7 @@ export default {
 			
 		},
 		student(){
-			uni.navigateTo({
+			uni.switchTab({
 				url:"/pages/student/index",
 				});
 		},
