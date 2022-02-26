@@ -36,7 +36,7 @@ export default{
 }
 </script>
 
-<style>
+<style scoped>
 	.text{
 		width: 60%;
 	}

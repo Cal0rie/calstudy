@@ -1,34 +1,13 @@
 {
     "easycom" : {
-        "^u-(.*)" : "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+        "^u-(.*)" : "uview-ui/components/u-$1/u-$1.vue"
     },
     "pages" : [
         //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
         {
-            "path" : "pages/index/index",
+            "path" : "pages/auth/login",
             "style" : {
-                "navigationBarTitleText" : "PureBlog"
-            }
-        },
-        {
-            "path" : "pages/Content/Content",
-            "style" : {
-                "navigationBarTitleText" : "",
-                "enablePullDownRefresh" : false
-            }
-        },
-        {
-            "path" : "pages/Edit/Edit",
-            "style" : {
-                "navigationBarTitleText" : "",
-                "enablePullDownRefresh" : false
-            }
-        },
-        {
-            "path" : "pages/New/New",
-            "style" : {
-                "navigationBarTitleText" : "",
-                "enablePullDownRefresh" : false
+                "navigationBarTitleText" : "ExamSys"
             }
         },
         {
@@ -64,6 +43,24 @@
         }
         ,{
             "path" : "pages/teacher/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/student/message",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/student/me",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

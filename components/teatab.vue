@@ -1,9 +1,9 @@
 <template>
-	<!-- 这里是学生端底栏 -->
+	<!-- 这里是教师端底栏 -->
 	<view class='tab'>
-		<view @tap='index' class='tabbar'>首页</view>
-		<view @tap='message' class='tabbar'>消息</view>
-		<view @tap='me' class='tabbar'>我</view>
+		<view class='tabbar'>首页</view>
+		<view class='tabbar'>组卷发布</view>
+		<view class='tabbar'>我</view>
 	</view>
 </template>
 
@@ -14,17 +14,6 @@
 			return {
 				
 			};
-		},
-		methods:{
-			index(){
-				
-			},
-			message(){
-				
-			},
-			me(){
-				
-			},
 		}
 	}
 </script>

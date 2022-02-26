@@ -20,6 +20,7 @@ export function createApp() {
     app
   }
 }
-import uView from '@/uni_modules/uview-ui'
-Vue.use(uView)
+
 // #endif
+import uView from 'uview-ui';
+Vue.use(uView)
