@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "uview-ui": "^2.0.28",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.68.0"
+  }
+}
